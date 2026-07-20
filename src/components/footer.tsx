@@ -21,7 +21,16 @@ export function Footer() {
           >
             AniList
           </a>
-          . Dibuat untuk penggemar donghua Indonesia.
+          . Dibuat oleh{" "}
+          <a
+            href="https://github.com/r1k0x7"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="font-medium text-primary hover:underline"
+          >
+            r1k0x7
+          </a>
+          .
         </p>
         <nav className="flex gap-4">
           <Link href="/ranking" className="hover:text-primary">
