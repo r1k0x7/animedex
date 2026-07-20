@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import "@fontsource-variable/plus-jakarta-sans";
 
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";

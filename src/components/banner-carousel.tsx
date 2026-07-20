@@ -44,7 +44,7 @@ export function BannerCarousel({ items }: BannerCarouselProps) {
             <CarouselItem key={media.id}>
               <Link
                 href={`/donghua/${media.id}`}
-                className="group relative block aspect-[21/9] w-full overflow-hidden rounded-xl bg-muted md:aspect-[3/1]"
+                className="group relative block aspect-[21/9] w-full overflow-hidden rounded-xl bg-muted shadow-lg ring-1 ring-border/50 md:aspect-[3/1]"
               >
                 <Image
                   src={media.bannerImage as string}
