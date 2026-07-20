@@ -21,7 +21,8 @@ export function DonghuaRow({ title, items, href, priority }: DonghuaRowProps) {
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold tracking-tight md:text-2xl">
+        <h2 className="flex items-center gap-2.5 text-xl font-bold tracking-tight md:text-2xl">
+          <span className="h-6 w-1 rounded-full bg-gradient-to-b from-primary to-rose-400" />
           {title}
         </h2>
         {href ? (

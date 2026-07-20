@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --font-sans: "Plus Jakarta Sans Variable";
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -53,19 +54,63 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: hsl(var(--primary) / 0.25);
   }
 }
 
-/* Sembunyikan scrollbar untuk carousel/scroller horizontal */
 @layer utilities {
+  /* Sembunyikan scrollbar untuk carousel/scroller horizontal */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Teks gradien untuk judul & aksen. */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-rose-400 bg-clip-text text-transparent;
+  }
+
+  /* Latar cahaya lembut (radial glow) di belakang hero. */
+  .hero-glow {
+    background:
+      radial-gradient(
+        40rem 24rem at 50% -10%,
+        hsl(var(--primary) / 0.16),
+        transparent 70%
+      );
+  }
+}
+
+/* Scrollbar halaman yang lebih halus. */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 }

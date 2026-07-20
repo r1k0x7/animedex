@@ -24,10 +24,13 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center gap-4">
-        <Link href="/" className="flex items-center gap-2 font-bold">
-          <Clapperboard className="h-6 w-6 text-primary" />
+        <Link
+          href="/"
+          className="group flex items-center gap-2 font-bold transition-opacity hover:opacity-90"
+        >
+          <Clapperboard className="h-6 w-6 text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
           <span className="hidden sm:inline">
-            Donghua<span className="text-primary">Wiki</span>
+            Donghua<span className="text-gradient">Wiki</span>
             <span className="text-muted-foreground"> ID</span>
           </span>
         </Link>

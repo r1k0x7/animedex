@@ -29,14 +29,14 @@ export function CharacterCard({
         className,
       )}
     >
-      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-muted">
+      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-muted shadow-sm ring-1 ring-border/50 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-black/20 group-hover:ring-primary/40">
         {image ? (
           <Image
             src={image}
             alt={name}
             fill
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 180px"
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
             priority={priority}
           />
         ) : (

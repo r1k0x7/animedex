@@ -30,14 +30,14 @@ export function DonghuaCard({ media, className, priority }: DonghuaCardProps) {
         className,
       )}
     >
-      <div className="relative aspect-[2/3] w-full overflow-hidden rounded-lg bg-muted">
+      <div className="relative aspect-[2/3] w-full overflow-hidden rounded-lg bg-muted shadow-sm ring-1 ring-border/50 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-black/20 group-hover:ring-primary/40">
         {cover ? (
           <Image
             src={cover}
             alt={title}
             fill
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 25vw, 200px"
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
             priority={priority}
           />
         ) : (
@@ -47,7 +47,7 @@ export function DonghuaCard({ media, className, priority }: DonghuaCardProps) {
         )}
 
         {media.averageScore ? (
-          <div className="absolute left-2 top-2 flex items-center gap-1 rounded-md bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white backdrop-blur">
+          <div className="absolute left-2 top-2 flex items-center gap-1 rounded-md bg-black/70 px-1.5 py-0.5 text-xs font-semibold text-white shadow-sm backdrop-blur">
             <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
             {(media.averageScore / 10).toFixed(1)}
           </div>
